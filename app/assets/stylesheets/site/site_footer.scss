@@ -58,11 +58,17 @@
 }
 
 @media (max-width:450px) {
+
+  .siteFooter__copyright {
+    text-align: center;
+    background-position:center top;
+  }
   .siteFooter__primaryNav,
   .siteFooter__secondaryNav {
     width:100%;
     float:none;
     margin-right:0;
+    text-align: center;
   }
 
   .siteFooter__primaryNav {
