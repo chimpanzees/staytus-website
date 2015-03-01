@@ -1,28 +1,9 @@
-== README
+# Staytus Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the website for [Staytus](http://staytus.co). This website is
+open sourced but deliberably un-licenced as it may not be used for any
+other purpose other than to market Staytus (unless expressly granted
+by the author).
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+You may, however, submit pull requests if you notice there's anything
+amiss which needs correction.
