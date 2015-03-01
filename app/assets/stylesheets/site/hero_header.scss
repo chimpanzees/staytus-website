@@ -18,7 +18,7 @@
 
 .heroHeader__text {
   position:absolute;
-  bottom:10vh;
+  bottom:15vh;
   width:100%;
   text-align:center;
 }
@@ -63,6 +63,21 @@
   }
 }
 
+.heroHeader--style1 {
+  background-image:image-url('hero2.jpg');
+  .heroHeader__intro {
+    color:#a4d4e9;
+  }
+}
+
+.heroHeader--style2 {
+  background-image:image-url('hero3.jpg');
+  .heroHeader__intro {
+    color:#cadfc0;
+  }
+}
+
+
 @media (max-width:900px) {
   .heroHeader__title {
     font-size:50px;
@@ -71,13 +86,16 @@
 
 @media (max-width:650px) {
   .heroHeader__title {
-    font-size:40px;
+    font-size:37px;
+    margin-bottom:10px;
   }
   .heroHeader__intro {
     font-size:15px;
     line-height:20px;
   }
-
+  .heroHeader__buttons li {
+    margin:0 10px;
+  }
 }
 
 @media (max-width:450px) {
