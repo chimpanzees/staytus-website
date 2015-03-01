@@ -11,6 +11,16 @@
   %body{:class => Rails.env}
     = display_flash
     = yield
+
+    .partnersBar
+      .pageContainer
+        %p.partnersBar__title
+          Staytus would not be possible with the support from our partners below. Check them out.
+        %ul.partnersBar__logos
+          %li.partnersBar__logo= link_to image_tag('partners/viaduct.svg', :title => "Viaduct"), "http://viaduct.io"
+          %li.partnersBar__logo= link_to image_tag('partners/atech.svg', :title => "aTech Media"), "http://atechmedia.com"
+          %li.partnersBar__logo= link_to image_tag('partners/codebase.svg', :title => "Codebase"), "http://www.codebasehq.com"
+          %li.partnersBar__logo= link_to image_tag('partners/deploy.svg', :title => "Deploy"), "http://www.deployhq.com"
     .siteFooter
       .pageContainer
         .siteFooter__navArea
