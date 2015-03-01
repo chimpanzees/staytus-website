@@ -5,5 +5,18 @@
  */
 
 html { font-family:'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; font-size:14px;}
+body.development { border-left:2px solid #fff;}
 
-.pageContainer { width:900px; margin:auto; }
+.pageContainer { max-width:900px; margin:auto; }
+
+@media (max-width:900px) {
+  body.development { border-color:red;}
+}
+
+@media (max-width:650px) {
+  body.development { border-color:green;}
+}
+
+@media (max-width:450px) {
+  body.development { border-color:blue;}
+}
