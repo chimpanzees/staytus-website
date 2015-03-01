@@ -23,7 +23,7 @@
 
 .featuresPage__list {
   overflow: hidden;
-  margin-bottom:45px;
+  margin-bottom:55px;
 }
 
 .featuresPage__feature {
@@ -49,6 +49,10 @@
   color:#888;
   line-height:20px;
   margin-left:66px;
+}
+
+.featuresPage__list:last-child .featuresPage__feature:last-child {
+  margin-bottom:0;
 }
 
 @media (max-width:650px) {

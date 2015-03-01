@@ -11,3 +11,26 @@
   %body{:class => Rails.env}
     = display_flash
     = yield
+    .siteFooter
+      .pageContainer
+        .siteFooter__navArea
+          .siteFooter__primaryNav
+            %p.siteFooter__header The Staytus Project
+            %ul.siteFooter__nav
+              %li= link_to "Homepage", root_path
+              %li= link_to "Browse the code", repo_path
+              %li= link_to "Try the demo", demo_path
+              %li= link_to "Submit a bug", bug_path
+          .siteFooter__secondaryNav
+            %p.siteFooter__header Keep in touch
+            %ul.siteFooter__nav
+              %li= link_to "Read our blog", blog_path
+              %li= link_to "Follow me on Twitter", "http://twitter.com/adamcooke"
+              %li= link_to "Want to help out?", "mailto:me+staytus@adamcooke.io"
+
+        .siteFooter__copyright
+          %p.siteFooter__copyrightText Website copyright &copy; #{Date.today.year} Adam Cooke.
+          %p
+            This website is #{link_to 'open source', 'http://github.com/adamcooke/staytus-website'}. If you spot any issues, please feel
+            free to submit a pull request on GitHub.
+
