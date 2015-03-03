@@ -44,6 +44,7 @@
   li {
     display:inline-block;
     margin:0 15px;
+    position: relative;
     a {
       border-radius:40px;
       border:2px solid;
@@ -77,10 +78,28 @@
   }
 }
 
+.heroHeader__githubStar {
+  background:image-url('star.svg') no-repeat;
+  background-size:150px;
+  right:0;
+  top:0;
+  width:150px;
+  height:90px;
+  top:-20px;
+  position:absolute;
+  right:-170px;
+  opacity:0.4;
+}
+
 
 @media (max-width:900px) {
   .heroHeader__title {
     font-size:50px;
+  }
+  .heroHeader__githubStar {
+    width:120px;
+    background-size:120px;
+    right:-130px;
   }
 }
 
@@ -95,6 +114,9 @@
   }
   .heroHeader__buttons li {
     margin:0 10px;
+  }
+  .heroHeader__githubStar {
+    display:none;
   }
 }
 
