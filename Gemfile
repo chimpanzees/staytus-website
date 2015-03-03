@@ -20,3 +20,6 @@ gem 'dynamic_form'
 gem 'activevalidators'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails_env_config', group: :development
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'octokit'

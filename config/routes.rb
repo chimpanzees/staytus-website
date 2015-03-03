@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'github/star' => 'github#star'
+  get 'auth/github/callback' => 'sessions#github'
   get 'demo' => redirect("http://demo.staytus.co", :status => 302)
   get 'repo' => redirect('http://github.com/adamcooke/staytus', :status => 302)
   get 'bug' => redirect('https://github.com/adamcooke/staytus/issues/new?labels=bug', :status => 302)
