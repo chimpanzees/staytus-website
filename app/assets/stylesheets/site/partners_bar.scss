@@ -1,5 +1,5 @@
 .partnersBar {
-  border-top:4px solid #efefef;
+  border-top:1px solid #efefef;
   padding:60px 0 40px 0;
   text-align: center;
 }
@@ -11,18 +11,25 @@
 }
 
 .partnersBar__logo {
-  margin:0 20px;
+  margin:0 25px;
   display:inline-block;
   margin-bottom:25px;
   img {
-    height:30px;
+    height:40px;
+  }
+}
+
+@media (max-width:650px) {
+  .partnersBar__logo {
+    margin-bottom:40px;
   }
 }
 
 @media (max-width:450px) {
   .partnersBar__logo {
     display:block;
-    margin-bottom:40px;
+    margin-bottom:60px;
     &:last-child { margin-bottom:20px;}
+    img { height:50px;}
   }
 }
