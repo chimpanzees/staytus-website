@@ -1,0 +1,151 @@
+.installPage {
+  margin-top:100px;
+  margin-bottom:50px;
+}
+
+.installPage__back {
+  float:right;
+  text-decoration: none;
+  border-radius:50px;
+  background:#efefef;
+  padding:10px 20px;
+  border:2px solid transparent;
+  color:#777;
+  &:hover {
+    border-color:#999;
+  }
+}
+
+.installPage__heading {
+  font-size:52px;
+  font-weight:900;
+  letter-spacing:-0.02em;
+  margin-bottom:10px;
+  background:image-url('install.svg') no-repeat;
+  background-size:60px;
+  padding-top:80px;
+
+}
+
+.installPage__intro {
+  font-size:20px;
+  color:#888;
+  margin-bottom:50px;
+}
+
+.installPage__section {
+  padding:50px 0;
+  overflow: hidden;
+}
+
+.installPage__section--viaduct {
+  background:#068FD6;
+  color:#fff;
+}
+
+.installPage__sectionLeft {
+  float:left;
+  width:30%;
+}
+
+.installPage__sectionRight {
+  margin-left:32%;
+}
+
+.installPage__sectionHeading {
+  font-size:30px;
+  font-weight:600;
+  letter-spacing:-0.02em;
+  margin-bottom:15px;
+}
+
+.installPage__sectionText {
+  font-size:18px;
+  margin-bottom:25px;
+  opacity:0.7;
+  line-height:26px;
+}
+
+.installPage__sectionInstructions {
+  font-size:17px;
+  counter-reset: section;
+  list-style-type: none;
+  margin-left:50px;
+  margin-bottom:25px;
+  li {
+    margin-bottom:25px;
+    padding-left:30px;
+    line-height:1.5;
+    position: relative;
+    b { font-weight:600; border-bottom:4px solid rgba(255,255,255,0.2); margin:0 4px;}
+    &:before {
+      counter-increment: section;
+      font-weight:300;
+      font-size:30px;
+      position:absolute;
+      opacity:0.5;
+      margin-top:-10px;
+      left:0;
+      content: counters(section,".");
+    }
+    &:last-child {
+      margin-bottom:0;
+    }
+  }
+}
+
+.installPage__upgrade {
+  font-size:17px;
+  line-height:1.5;
+  background:image-url('upgrade-white.svg') no-repeat 36px 2px;
+  background-size:28px;
+  padding-left:80px;
+  opacity: 0.7;
+  b { font-weight:700;}
+}
+
+.installPage__code {
+  background:#333;
+  color:#fff;
+  margin-top:15px;
+  padding:20px;
+  font-size:16px;
+  line-height:24px;
+  white-space:nowrap;
+  overflow-x:auto;
+  span {
+    opacity:0.3;
+  }
+}
+
+@media (max-width:900px) {
+  .installPage {
+    margin-top:50px;
+  }
+  .installPage__sectionLeft {
+    float:none;
+    width:100%;
+  }
+  .installPage__sectionRight {
+    margin-left:0;
+  }
+  .installPage__sectionInstructions {
+    margin-left:10px;
+  }
+  .installPage__upgrade {
+    padding-left:40px;
+    background-position: 0 2px;
+  }
+}
+
+@media (max-width:650px) {
+}
+
+@media (max-width:450px) {
+  .installPage__heading {
+    font-size:30px;
+  }
+  .installPage__intro {
+    font-size:18px;
+  }
+}

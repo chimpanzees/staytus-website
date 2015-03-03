@@ -18,7 +18,7 @@
 
 .heroHeader__text {
   position:absolute;
-  bottom:15vh;
+  bottom:8vh;
   width:100%;
   text-align:center;
 }
@@ -41,6 +41,7 @@
 }
 
 .heroHeader__buttons {
+  margin-bottom:55px;
   li {
     display:inline-block;
     margin:0 15px;
@@ -91,6 +92,12 @@
   opacity:0.4;
 }
 
+.heroHeader__install {
+  color:#fff;
+  opacity: 0.4;
+  font-size:14px;
+}
+
 
 @media (max-width:900px) {
   .heroHeader__title {
@@ -122,8 +129,8 @@
 
 @media (max-width:450px) {
   .heroHeader__title {
-    font-size:55px;
-    line-height:55px;
+    font-size:45px;
+    line-height:45px;
     margin-bottom:18px;
   }
   .heroHeader__intro {
@@ -133,9 +140,10 @@
     opacity:0.8;
   }
   .heroHeader__text {
-    bottom:20px;
+    bottom:50px;
   }
   .heroHeader__buttons {
+    margin-bottom:10px;
     li {
       display:block;
       margin-bottom:35px;

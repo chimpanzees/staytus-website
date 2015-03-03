@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get 'api' => redirect('https://github.com/adamcooke/staytus/tree/master/doc/api', :status => 302)
   get 'blog' => redirect('http://blog.staytus.co', :status => 302)
   get 'donate' => redirect("/", :status => 302)
+
+  get 'install' => 'pages#install'
   root 'pages#home'
 end

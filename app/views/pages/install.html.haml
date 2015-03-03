@@ -1,0 +1,89 @@
+- @page_title = "How do I install Staytus?"
+.installPage
+  .pageContainer
+    = link_to "Back to homepage", root_path, :class => 'installPage__back'
+    %h1.installPage__heading How do I install Staytus?
+    %p.installPage__intro
+      Here are some instructions on how you can easily get Staytus installed
+      and running for you.
+
+  .installPage__section.installPage__section--viaduct
+    .pageContainer
+      .installPage__sectionLeft
+        %h2.installPage__sectionHeading Use the Viaduct app hosting platform
+        %p.installPage__sectionText
+          The easiest and quickest way to deploy Viaduct is to use the
+          #{link_to "Viaduct", "http://viaduct.io"} application hosting platform.
+      .installPage__sectionRight
+        %ol.installPage__sectionInstructions
+          %li= link_to "Sign up for a Viaduct account", "http://my.viaduct.io"
+          %li Select <b>Use the App Store</b> from your dashboard
+          %li Choose <b>Staytus</b> from the <b>CMS</b> category.
+          %li Follow the instructions and Staytus will be deployed straight away.
+          %li Once installed you can add your own custom domains and SSL, if needed using the Viaduct interface.
+        %p.installPage__upgrade
+          If you want to upgrade once you've deployed to Viaduct, you can simply
+          hit the <b>Deploy Now</b> button and the latest version will be
+          deployed for you and your data will be migrated.
+
+  .installPage__section
+    .pageContainer
+      .installPage__sectionLeft
+        %h2.installPage__sectionHeading Install Staytus on your own server
+        %p.installPage__sectionText
+          If you know your way around a server, you can install Staytus yourself
+          on your own Linux server. Just follow these instructions to install
+          Staytus.
+        %p.installPage__sectionText
+          Further information about installing Staytus can be found in the
+          #{link_to 'README', 'https://github.com/adamcooke/staytus/tree/stable/README.md'}
+          file in the repository.
+
+      .installPage__sectionRight
+        %ol.installPage__sectionInstructions
+          %li
+            Ensure your server has all the required prerequisites installed.
+            Specifically Ruby 2.0 or higher (plus RubyGems), MySQL
+            Server &amp; Git.
+          %li
+            Create a database and user on your MySQL server.
+          %li
+            Clone the Staytus repostiory using Git and then checkout the stable
+            branch which contains the most recent stable version of Staytus.
+            %pre.installPage__code
+              git clone https://github.com/adamcooke/staytus /opt/staytus<br>
+              cd /opt/staytus<br>
+              git checkout stable
+          %li
+            Install all the required Ruby dependencies.
+            %pre.installPage__code
+              gem install bundler <span># If you don't already have it</span><br>
+              bundle install --deployment --without development:test
+
+          %li
+            Copy your database configuration file into place and add your database
+            connection details.
+            %pre.installPage__code
+              cp config/database.example.yml config/database.yml <br>
+              nano -w config/database.yml
+
+          %li
+            Run the Staytus installation script which will populate the database
+            schema and compile assets.
+            %pre.installPage__code
+              bundle exec rake staytus:build staytus:install
+
+          %li
+            Start the Viaduct application. This will run Viaduct in the foreground.
+            You can use whatever tools you wish to run this in the background.
+            %pre.installPage__code
+              bundle exec foreman start
+
+          %li
+            When you want to upgrade, you can just pull the latest version of the
+            code, run the upgrade script and restart the app.
+            %pre.installPage__code
+              git pull origin stable<br>
+              bundle<br>
+              bundle exec rake staytus:build staytus:upgrade<br>
+              bundle exec foreman start
