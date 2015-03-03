@@ -43,6 +43,7 @@
   .siteFooter__secondaryNav {
     width:50%;
     margin-right:0;
+    text-align: center;
   }
   .siteFooter__navArea {
     overflow: hidden;
@@ -51,6 +52,8 @@
   .siteFooter__copyright {
     float:none;
     max-width:none;
+    text-align: center;
+    background-position:center top;
   }
   .siteFooter__copyrightText {
     margin-bottom:3px;
@@ -58,17 +61,10 @@
 }
 
 @media (max-width:450px) {
-
-  .siteFooter__copyright {
-    text-align: center;
-    background-position:center top;
-  }
   .siteFooter__primaryNav,
   .siteFooter__secondaryNav {
-    width:100%;
     float:none;
-    margin-right:0;
-    text-align: center;
+    width:100%;
   }
 
   .siteFooter__primaryNav {
