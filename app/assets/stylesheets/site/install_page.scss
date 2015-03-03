@@ -116,6 +116,14 @@
   span {
     opacity:0.3;
   }
+  &::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+    background: #333;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #666;
+  }
 }
 
 @media (max-width:900px) {
