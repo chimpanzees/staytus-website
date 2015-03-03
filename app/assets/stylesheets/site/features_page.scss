@@ -1,5 +1,5 @@
 .featuresPage {
-  margin:80px 0;
+  margin:100px 0;
 }
 
 .featurePage__heading {
@@ -54,7 +54,12 @@
   margin-bottom:0;
 }
 
+
 @media (max-width:650px) {
+
+  .featuresPage {
+    margin:80px 0;
+  }
 
   .featurePage__heading {
     font-size:40px;
@@ -76,6 +81,15 @@
     float:none;
     width:100%;
     padding:0;
+    margin-bottom:60px;
+  }
+}
+
+@media (max-width:450px) {
+  .featurePage__heading {
     margin-bottom:30px;
+  }
+  .featurePage__intro {
+    margin-bottom:50px;
   }
 }
